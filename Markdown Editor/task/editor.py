@@ -11,7 +11,8 @@ class Markdown:
         print("Special commands: " + " ".join(self.commands))
 
     def done(self):
-        pass
+        with open("output.md", "w") as file:
+            file.write(self.text)
 
     def plain(self):
         self.text += self.input_text()
